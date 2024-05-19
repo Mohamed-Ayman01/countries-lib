@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   let goBack = document.querySelector(".content .container .go-back");
 
   async function getCountry(queryString) {
-    let res = await fetch("../data.json");
+    let res = await fetch("./../data.json");
     let arr = await res.json();
 
     let urlParams = new URLSearchParams(queryString);
@@ -74,12 +74,12 @@ window.addEventListener("load", function () {
   getCountry(window.location.search);
 
   goBack.addEventListener("click", function () {
-    window.location = "../index.html";
+    window.location = "./../index.html";
   });
 });
 
 window.addEventListener("click", function (e) {
   if (e.target.classList.contains("border-country")) {
-    this.window.location = `../details/index.html?country=${e.target.getAttribute("data-country").toLowerCase()}`
+    this.window.location = `./../details/index.html?country=${e.target.getAttribute("data-country").toLowerCase()}`
   }
 })
