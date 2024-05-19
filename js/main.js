@@ -1,7 +1,9 @@
+let jsonFileUrl = "https://mohamed-ayman01.github.io/countries-lib/data.json";
+
 let countryCont = document.querySelector(".container .country-cont");
 
 async function getCountries() {
-  let res = await fetch("./../data.json");
+  let res = await fetch(jsonFileUrl);
   let arr = await res.json();
 
   for (let i = 0; i < 8; i++) {
@@ -16,7 +18,7 @@ async function getCountries() {
     countryBox.setAttribute("data-country", arr[i].name.toLowerCase())
     
     countryBox.addEventListener("click", function () {
-      window.location = `./../details/index.html?country=${countryBox.getAttribute("data-country")}`
+      window.location = `./countries-lib/details/index.html?country=${countryBox.getAttribute("data-country")}`
     });
 
     countryBox.innerHTML = `
@@ -65,7 +67,7 @@ selectOptions.forEach((element) => {
     countryCont.innerHTML = "";
 
     async function getCountries() {
-      let res = await fetch("./../data.json");
+      let res = await fetch(jsonFileUrl);
       let arr = await res.json();
 
       for (let i = 0; i < arr.length; i++) {
@@ -81,7 +83,7 @@ selectOptions.forEach((element) => {
           countryBox.setAttribute("data-country", arr[i].name.toLowerCase())
     
           countryBox.addEventListener("click", function () {
-            window.location = `./../details/index.html?country=${countryBox.getAttribute("data-country")}`
+            window.location = `./countries-lib/details/index.html?country=${countryBox.getAttribute("data-country")}`
           });
 
           countryBox.innerHTML = `
@@ -115,7 +117,7 @@ searchInput.addEventListener("change", function () {
   countryCont.innerHTML = "";
 
   async function getCountries() {
-    let res = await fetch("./../data.json");
+    let res = await fetch(jsonFileUrl);
     let arr = await res.json();
 
     for (let i = 0; i < arr.length; i++) {
@@ -131,7 +133,7 @@ searchInput.addEventListener("change", function () {
         countryBox.setAttribute("data-country", arr[i].name.toLowerCase())
     
         countryBox.addEventListener("click", function () {
-          window.location = `./../details/index.html?country=${countryBox.getAttribute("data-country")}`
+          window.location = `./countries-lib/details/index.html?country=${countryBox.getAttribute("data-country")}`
         });
 
         countryBox.innerHTML = `
