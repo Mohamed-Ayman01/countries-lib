@@ -78,13 +78,13 @@ window.addEventListener("load", function () {
   getCountry(window.location.search);
 
   goBack.addEventListener("click", function () {
-    window.location = "./countries-lib/index.html";
+    window.location = "./../../index.html";
   });
 });
 
 window.addEventListener("click", function (e) {
   if (e.target.classList.contains("border-country")) {
-    this.window.location = `./countries-lib/details/index.html?country=${e.target
+    this.window.location = `./index.html?country=${e.target
       .getAttribute("data-country")
       .toLowerCase()}`;
   }

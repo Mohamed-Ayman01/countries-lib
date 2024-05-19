@@ -18,7 +18,7 @@ async function getCountries() {
     countryBox.setAttribute("data-country", arr[i].name.toLowerCase())
     
     countryBox.addEventListener("click", function () {
-      window.location = `./countries-lib/details/index.html?country=${countryBox.getAttribute("data-country")}`
+      window.location = `./details/index.html?country=${countryBox.getAttribute("data-country")}`
     });
 
     countryBox.innerHTML = `
@@ -83,7 +83,7 @@ selectOptions.forEach((element) => {
           countryBox.setAttribute("data-country", arr[i].name.toLowerCase())
     
           countryBox.addEventListener("click", function () {
-            window.location = `./countries-lib/details/index.html?country=${countryBox.getAttribute("data-country")}`
+            window.location = `./details/index.html?country=${countryBox.getAttribute("data-country")}`
           });
 
           countryBox.innerHTML = `
@@ -133,7 +133,7 @@ searchInput.addEventListener("change", function () {
         countryBox.setAttribute("data-country", arr[i].name.toLowerCase())
     
         countryBox.addEventListener("click", function () {
-          window.location = `./countries-lib/details/index.html?country=${countryBox.getAttribute("data-country")}`
+          window.location = `./details/index.html?country=${countryBox.getAttribute("data-country")}`
         });
 
         countryBox.innerHTML = `
