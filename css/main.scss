@@ -1,0 +1,104 @@
+@import url("./theme.css");
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// colors
+$dark-mode-elements: hsl(209, 23%, 22%); // (Dark Mode Elements)
+$dark-mode-bg: hsl(207, 26%, 17%); // (Dark Mode Background)
+$light-mode-text: hsl(200, 15%, 8%); // (Light Mode Text)
+$light-mode-input: hsl(0, 0%, 52%); // (Light Mode Input)
+$light-mode-bg: hsl(0, 0%, 98%); // (Light Mode Background)
+$white: hsl(0, 0%, 100%); // (Dark Mode Text & Light Mode Elements) 
+
+
+%button-hover {
+  transition: opacity .3s;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+input {
+  outline: none
+}
+
+nav {
+  background-color: var(--bg-2);
+}
+
+.content {
+  .filters {
+    > * {
+      background-color: var(--bg-2);
+    }
+
+    input {
+
+      &::placeholder {
+        color: var(--color);
+      }
+    }
+
+    .select {
+      position: relative;
+      width: fit-content;
+      cursor: pointer;
+      .options {
+        position: absolute;
+        top: calc(100% + 5px);
+        background: var(--bg-2);
+        left: 0;
+        display: none;
+        flex-direction: column;
+        gap: .25rem;
+        transition: opacity .3s;
+        opacity: 0;
+        z-index: 1;
+
+        &.show {
+          display: flex
+        }
+
+        .opt:hover {
+          text-indent: 5px;
+        }
+      }
+    }
+  }
+
+  .country-cont {
+    gap: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    .country-box {
+      @extend %button-hover;
+      cursor: pointer;
+      background-color: var(--bg-2);
+      display: flex;
+      flex-direction: column;
+
+      .img-box {
+        height: 160px;
+        overflow: hidden;
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .txt-box {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

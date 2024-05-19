@@ -1,0 +1,45 @@
+@import url("./theme.css");
+
+%button-hover {
+  transition: opacity .3s;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.go-back {
+  background-color: var(--bg-2);
+  @extend %button-hover;
+}
+
+.country {
+  .info-box {
+    .info {
+      p {
+        height: fit-content;
+        margin: 0 {bottom: .6rem};
+        
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .border-countries {
+      display: flex;
+      ul {
+        display: inline-flex;
+        gap: .5rem;
+        flex-wrap: wrap;
+      }
+      li {
+        list-style: none;
+        background-color: var(--bg-2);
+        padding: .5rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        @extend %button-hover;
+      }
+    }
+  }
+}

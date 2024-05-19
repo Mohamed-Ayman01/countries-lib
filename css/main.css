@@ -1,0 +1,76 @@
+@import url("./theme.css");
+.content .country-cont .country-box {
+  transition: opacity 0.3s;
+}
+.content .country-cont .country-box:hover {
+  opacity: 0.8;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+input {
+  outline: none;
+}
+
+nav {
+  background-color: var(--bg-2);
+}
+
+.content .filters > * {
+  background-color: var(--bg-2);
+}
+.content .filters input::placeholder {
+  color: var(--color);
+}
+.content .filters .select {
+  position: relative;
+  width: fit-content;
+  cursor: pointer;
+}
+.content .filters .select .options {
+  position: absolute;
+  top: calc(100% + 5px);
+  background: var(--bg-2);
+  left: 0;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: opacity 0.3s;
+  opacity: 0;
+  z-index: 1;
+}
+.content .filters .select .options.show {
+  display: flex;
+}
+.content .filters .select .options .opt:hover {
+  text-indent: 5px;
+}
+.content .country-cont {
+  gap: 3em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.content .country-cont .country-box {
+  cursor: pointer;
+  background-color: var(--bg-2);
+  display: flex;
+  flex-direction: column;
+}
+.content .country-cont .country-box .img-box {
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+.content .country-cont .country-box .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.content .country-cont .country-box .txt-box {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=main.css.map */
